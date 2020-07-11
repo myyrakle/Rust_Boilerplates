@@ -8,6 +8,8 @@ appenders:
     filters:
       - kind: threshold
         level: trace
+    encoder:
+      pattern: "{d(%Y-%m-%d %H:%M:%S %Z)(utc)} - {l}:{m}{n}"
 
   trace:
     kind: file
